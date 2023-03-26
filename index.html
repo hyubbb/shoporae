@@ -13,21 +13,22 @@
     />
     <style>
       body {
+        margin: 0;
         font-family: "Yeseva One", cursive;
-        background-color: hwb(33 86% 0%);
+        background-color: rgb(255, 239, 219);
       }
 
-      #contain {
+      #container {
         display: flex;
         justify-content: center;
         align-items: center;
         /* margin-top: 120px; */
         height: 300px;
-        border: 1px solid red;
+        /* border: 1px solid red; */
       }
-      #contain .in_box {
+      #container .in_box {
         font-size: 80px;
-        border: 1px solid black;
+        /* border: 1px solid black; */
       }
 
       header {
@@ -42,7 +43,7 @@
       header > .inner {
         display: block;
         position: relative;
-        border: 1px solid green;
+        /* border: 1px solid green; */
       }
 
       header > .inner > .logo {
@@ -57,25 +58,24 @@
   </head>
   <body>
     <header>
-      <div class="inner">1</div>
+      <div class="inner"></div>
     </header>
-    <div id="contain">
+    <div id="container">
       <div class="in_box">
         we're <br />
         on<br />
         vacation
       </div>
     </div>
-  </body>
+    <script>
+      let w_size = window.innerHeight;
+      let sizechk = () => {
+        var contain_height = document.getElementById("container");
+        contain_height.style.height = w_size + "px";
+        console.log(w_size);
+      };
 
-  <script>
-    let w_size = document.body.clientHeight;
-    window.addEventListener("click", (w_size) => {
-      var contain_height = document.getElementById("contain");
-      // console.log(w_size);
-      contain_height.style.height = w_size + "px";
-      // console.log(contain_height);
-    });
-  </script>
+      window.addEventListener("resize", sizechk());
+    </script>
+  </body>
 </html>
-`
