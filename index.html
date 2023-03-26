@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>orae</title>
+    <title>shoporae</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,11 +24,9 @@
         align-items: center;
         /* margin-top: 120px; */
         height: 300px;
-        /* border: 1px solid red; */
       }
       #container .in_box {
         font-size: 80px;
-        /* border: 1px solid black; */
       }
 
       header {
@@ -43,12 +41,7 @@
       header > .inner {
         display: block;
         position: relative;
-        /* border: 1px solid green; */
       }
-
-      header > .inner > .logo {
-      }
-
       .inner {
         position: relative;
         width: 1100px;
@@ -62,20 +55,18 @@
     </header>
     <div id="container">
       <div class="in_box">
-        we're <br />
-        on<br />
+        Sorry,</p> we're on<br />
         vacation
       </div>
     </div>
     <script>
       let w_size = window.innerHeight;
-      let sizechk = () => {
+      let sizeChk = () => {
         var contain_height = document.getElementById("container");
         contain_height.style.height = w_size + "px";
         console.log(w_size);
       };
-
-      window.addEventListener("resize", sizechk());
+      window.addEventListener("resize", sizeChk());
     </script>
   </body>
 </html>
